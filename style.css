@@ -15,6 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
     flex-wrap: wrap;
     max-width: 1200;
     padding: 20px;
@@ -41,7 +42,7 @@ p {
     background-color: #FFF;
     border-radius: 5px; 
     box-shadow: 0 6px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -53,15 +54,77 @@ p {
 
 .box-blue {
     background-color: hsl(248, 32%, 49%);
+    padding: 20px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-control small {
+    position: absolute;
+    bottom: -20px;
+    opacity: 0;
+    right: 0;
+    text-align: right;
 }
 
 input {
+    border-radius: 5px;
+    border: 2px solid hsl(246, 25%, 77%);
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Poppins', 'sans-serif';
+    padding: 15px 25px;
     display: block;
     width: 100%;
-    border-radius: 5px;
-    padding: 15px 25px;
 }
 
+input:focus {
+    border: 2px solid hsl(248, 32%, 49%);
+    outline: none;
+}
+
+button {
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 5px;
+    border: 1px solid hsl(154, 59%, 45%);
+    box-shadow: 0 2px hsl(154, 59%, 45%);
+    color: #FFF;
+    cursor: pointer;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    display: block;
+    text-transform: uppercase;
+    width: 100%;
+    
+}
+button:focus {
+    outline: none;
+}
+
+button:active {
+    box-shadow: 0 0 hsl(154, 59%, 45%);
+    transform: translateY(2px);
+}
+
+small {
+    display: block;
+    color: #bbb;
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+small a {
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+    text-decoration: none;
+}
 
 
 
