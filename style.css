@@ -18,7 +18,6 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
     max-width: 1200;
-    padding: 20px;
     min-height: 100vh;
 }
 
@@ -63,8 +62,10 @@ p {
 }
 
 .form-control small {
+    color: hsl(0, 100%, 74%);
     position: absolute;
-    bottom: -20px;
+    font-weight: 600;
+    bottom: -24px;
     opacity: 0;
     right: 0;
     text-align: right;
@@ -125,6 +126,59 @@ small a {
     font-weight: 600;
     text-decoration: none;
 }
+
+
+@media screen and (max-width: 768px) {
+    
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+    .container {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
