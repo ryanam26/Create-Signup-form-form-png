@@ -82,9 +82,31 @@ input {
     width: 100%;
 }
 
+.form-control.error input {
+    border-color: hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+}
+
+.form-control.error input::placeholder {
+    border-color: hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+}
+
 input:focus {
     border: 2px solid hsl(248, 32%, 49%);
     outline: none;
+}
+
+.form-control img {
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 20px;
+}
+
+.form-control.error img {
+    opacity: 1;
 }
 
 button {

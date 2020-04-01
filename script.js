@@ -11,29 +11,46 @@ form.addEventListener('submit', e => {
 
     if (firstName === "") {
         addErrorTo('firstname', 'First Name is required');
+    } else {
+        removeErrorFrom('firstname')
     }
 
     if (lastName === "") {
         addErrorTo('lastname', 'Last Name is required');
+    } else {
+        removeErrorFrom('lastname')
     }
 
     if (email === "") {
         addErrorTo('email', 'Email is required');
-    }
-
-    if (isValid(email)) {
-        addErrorTo('email', 'email is not valid');
+    } else if (!isValid(email)) {
+        addErrorTo('email', 'Email is not valid');
+    } else {
+        removeErrorFrom('email')
     }
 
     if (password === '') {
         addErrorTo('password', 'Password is required');
+    } else {
+        removeErrorFrom('password')
     }
 });
 
 function addErrorTo(field, message) {
-    const small = form[field].parentNode.querySelector('small')
+    const formControl = form[field].parentNode;
+    formControl.classList.add('error');
+
+    const small = formControl.querySelector('small')
     small.innerText = message;
     small.style.opacity = '1';
+}
+
+function removeErrorFrom(field) {
+    const formControl = form[field].parentNode;
+    formControl.classList.remove('error');
+
+    const small = formControl.querySelector('small');
+    small.style.opacity = '0';
 }
 
 function isValid(email) {
